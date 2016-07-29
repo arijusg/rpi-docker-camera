@@ -5,7 +5,7 @@ RUN apt-get update
     		build-essential \
 		cmake \
     		curl \
-    		git
+    		git \
  	&& apt-get clean \
  	&& rm -rf /var/lib/apt/lists/*
 
