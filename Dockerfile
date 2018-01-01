@@ -9,8 +9,10 @@ RUN apt-get update
  	&& apt-get clean \
  	&& rm -rf /var/lib/apt/lists/*
 
-RUN cd
+WORKDIR /
 RUN git clone --depth 1 https://github.com/raspberrypi/userland.git
-RUN cd userland
+
+WORKDIR /userland
+RUN chmod +x buildme
 RUN ./buildme
 
